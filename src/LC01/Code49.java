@@ -10,7 +10,7 @@ public class Code49 {
     }
 
     /**
-     * 暴力破解
+     *
      *
      * @return
      */
