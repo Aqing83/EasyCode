@@ -10,12 +10,23 @@ public class test {
 
     public static void main(String[] args) {
 
-        List<String> listString = new ArrayList<>();
+        testStringBuilder();
+        testStringBuffer();
+    }
 
-        List<String> list = new ArrayList<>();
+    public static void testStringBuffer() {
+        StringBuffer stringBuffer = new StringBuffer();
+        stringBuffer.append("321231");
+        System.out.println(stringBuffer.toString());
 
-        boolean a = listString.contains("a");
-        list.removeAll(listString);
+        return ;
+    }
 
+    public static void testStringBuilder() {
+        StringBuilder stringBuffer = new StringBuilder();
+        stringBuffer.append("321231");
+        System.out.println(stringBuffer.toString());
+
+        return ;
     }
 }

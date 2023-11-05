@@ -13,21 +13,22 @@ public class Code11 {
      * @return
      */
     public static int maxArea(int[] height) {
-        if (height.length < 1) {
-            return 0;
-        }
-        int max = 0;
-        int small = 0;
-        int big = height.length - 1;
-        while (big != small) {
-            if (height[small] > height[big]) {
-                max = Math.max(max, height[big--] * (big - small + 1));
-            } else {
-                max = Math.max(max, height[small++] * (big - small + 1));
+        int result = 0;
+
+        int l = 0;
+        int r = height.length - 1;
+
+        while (l != r) {
+            int min = Integer.min(height[l], height[r]);
+            result = Integer.max(result, (r - l) * min);
+            if (height[l] < height[r]) {
+                l++;
+            }else{
+                r--;
             }
         }
-        return max;
 
+        return result;
     }
 
 }
